@@ -64,30 +64,35 @@
       <div class="row">
         <div class="col-xs-6">
 
-          <div id="map"></div>
+          
+          <div id="map" style="width: 100%; height: 400px;"></div>
 
-          <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js">
-          </script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
-          <script type="text/javascript">
-          var myOptions = {
-              zoom: 15,
-              center: new google.maps.LatLng(48.8839797, 2.327989500000058),
-              mapTypeId: google.maps.MapTypeId.ROADMAP,
-              styles: [{"featureType":"water","stylers":[{"color":"#46bcec"},{"visibility":"on"}]},{"featureType":"landscape","stylers":[{"color":"#f2f2f2"}]},{"featureType":"road","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]}]
-          };
+<script type="text/javascript">
+  var myLatlng = new google.maps.LatLng(48.8839797, 2.327989500000058);
 
-          var map = new google.maps.Map(document.getElementById('map'), myOptions);
+  var myOptions = {
+      zoom: 14,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: []
+  };
 
-          </script>
+  var map = new google.maps.Map(document.getElementById('map'), myOptions);
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: "You are here!"
+  });
+</script>
 
         </div>
         <div class="col-xs-6">
           <h1>Pathé Wepler</h1>
           <p><i class="fa fa-map-marker"></i> 140 Boulevard de Clichy, 75018 Paris, France</p>
           <p><i class="fa fa-phone"></i> (+33)892 69 66 96</p>
-          <p> Métro : place de clichy</p>
+          <p> <i class="far fa-train"></i> Métro : Place de clichy</p>
         </div>
       </div>
     </div>
