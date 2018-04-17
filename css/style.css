@@ -1,8 +1,7 @@
 /* General classes for page */
 
 body {
-  background-image: url("../images/grid.jpg");
-  font-family: 'Open Sans';
+  font-family: 'Open Sans','sans-serif';
   font-color: #white;
 }
 
@@ -17,11 +16,12 @@ body {
 }
 
 #footer a {
-  color: #cccccc;
+  color: #FFFFFF;
+  color: white;
 }
 
 #footer a:hover {
-  color: white;
+  color: grey;
 }
 
 .social a {
@@ -32,32 +32,49 @@ body {
   text-decoration: none;
 }
 
+#img {
+  size: 300px
+}
 /* Lead with big image */
 
 .wrapper {
   background-image: url('../images/background/background.jpg');
-  height: 650px;
+  height: 700px;
   background-size: cover;
   padding-top: 150px;
   text-align: center;
   color: white;
+  padding-bottom: 1em
+}
+#cinelogo{
+  background-image: url('../images/background/pathe.jpg');
+  height: 700px;
+  background-size: cover;
+  padding-top: 150px;
+  text-align: center;
+  color: white;
+  padding-bottom: 1em
+
 }
 
 .lead h1 {
-  font-size: 72px;
+  font-family: Black+Han+Sans;
+  font-size:  10vmin;
   text-shadow: 0 0 20px rgba(0, 0, 0, .8);
   font-weight: normal;
   padding-left: 1em;
   padding-right: 1em;
+  padding-bottom: 1em;
 
 }
 
 .lead h2 {
-  background: rgba(0, 0, 0, .4);
+  background: rgba(0, 0, 0, .0);
   display: inline-block;
   padding: 0.2em;
   font-size: 18px;
-  font-weight: 300;
+  text-shadow: 0 0 20px rgba(0, 0, 0, .8);
+  font-weight: normal;
   letter-spacing: 2px;
   margin-bottom: 2em;
 }
@@ -85,13 +102,20 @@ body {
 .btn-primary {
   background-color: #0073bb;
   size: 600px;
+  padding: 1em;
 }
-
 .btn-primary:hover {
   background-color: #EB5757;
   border-color: #EB5757;
 }
-
+.btn-secondary {
+ background-color: #0073bb;
+  size: 600px;
+  }
+.btn-secondary:hover {
+  background-color: #EB5757;
+  border-color: #EB5757;
+}
 /* How to override the default Bootstrap navbar */
 
 .navbar-transparent {
@@ -100,7 +124,7 @@ body {
 
 .navbar-transparent .navbar-brand,
 .navbar-transparent .navbar-nav > li > a {
-  color: #eeeeee;
+  color: #FFFFFF;
 }
 
 .navbar-transparent .navbar-brand:hover,
